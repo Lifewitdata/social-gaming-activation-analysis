@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.DS_Store
+*.log
+*.tmp
+# Bundled synthetic data are intentional, reproducible portfolio assets.
+# Never commit DATABASE_URL, credentials, or real user telemetry.

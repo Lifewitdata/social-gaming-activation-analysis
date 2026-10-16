@@ -1,0 +1,6 @@
+{
+  "xsd_passed": true,
+  "errors": [],
+  "schema": "Tableau official twb_2026.1.0.xsd; auxiliary namespace imports resolved locally",
+  "native_tableau_open_tested": false
+}

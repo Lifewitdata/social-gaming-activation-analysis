@@ -1,0 +1,11 @@
+check_name,violations
+"event_before_signup",0
+"event_outside_observation",0
+"event_session_owner",0
+"event_outside_session",0
+"attempt_session_owner",0
+"game_attempt_mismatch",0
+"event_attempt_owner",0
+"completed_game_missing_event",0
+"invalid_game_event_order",0
+"missing_signup_event",0

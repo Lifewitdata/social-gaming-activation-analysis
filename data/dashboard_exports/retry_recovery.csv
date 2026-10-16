@@ -1,0 +1,4 @@
+first_outcome,users,retry_users,activated_users,activation_rate
+"abandoned",1465,790,478,"0.32627986348122866894"
+"failed",276,153,93,"0.33695652173913043478"
+"joined",5134,1141,3911,"0.76178418387222438644"

@@ -1,0 +1,12 @@
+event_name,trigger,additional_required_identifiers,rule,common_required_fields,clock_and_deduplication
+session_started,Client foreground session begins,session_id,Once per session; no qualifying retention activity alone,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+sign_up,Server registration succeeds,"user_id, session_id",Once per user; timestamp equals signup_at,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+onboarding_completed,Required onboarding steps complete,"user_id, session_id",Do not fire on page view,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+lobby_viewed,Playable lobby is visibly loaded,"user_id, session_id",Meaningful activity for D7,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+matchmaking_started,Server accepts queue request,attempt_id,New ID per attempt; clock starts,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+game_joined,Server confirms game membership,"attempt_id, game_id",Successful queue outcome,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+game_join_failed,Queue exits on technical failure,"attempt_id, failure_reason in attempts table",Do not mix with abandonment,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+queue_abandoned,User exits queue before joining,attempt_id,Separate from technical errors,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+game_started,Server confirms match start,"attempt_id, game_id",Must follow join in same game,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+game_completed,Server confirms terminal completed game,"attempt_id, game_id",Must follow same-game start,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id
+game_exited,User leaves before completion,"attempt_id, game_id",Started game; not activation,"event_id,user_id,session_id,event_timestamp",UTC server-normalised timestamp; deduplicate immutable event_id

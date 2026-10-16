@@ -1,0 +1,35 @@
+table,grain,column,type,definition,null_meaning,reference
+users,one user,user_id,text,User identifier,Never,users.user_id
+users,one user,signup_at,timestamptz UTC,Successful registration timestamp,Never,
+users,one user,acquisition_channel,category,First-touch channel: organic/referral/paid_social/influencer,Never,
+users,one user,device_tier,category,Simulated hardware tier: low/mid/high,Never,
+users,one user,signup_app_version,text,App version at registration: 1.0/1.1,Never,
+sessions,one session,session_id,text,Session identifier,Never,sessions.session_id
+sessions,one session,user_id,text,User identifier,Never,users.user_id
+sessions,one session,session_start,timestamptz UTC,Session open time,Never,
+sessions,one session,session_end,timestamptz UTC,Session end or observation cutoff,Never,
+sessions,one session,app_version,text,Version used during session,Never,
+sessions,one session,network_type,category,wifi/mobile_good/mobile_poor,Never,
+events,one event (raw can contain duplicates),event_id,text,Immutable event identity; raw contains planted duplicates,Never,
+events,one event (raw can contain duplicates),user_id,text,User identifier,Never,users.user_id
+events,one event (raw can contain duplicates),session_id,text,Session identifier,Never,sessions.session_id
+events,one event (raw can contain duplicates),event_name,category,Event taxonomy; see tracking_plan.csv,Never,
+events,one event (raw can contain duplicates),event_timestamp,timestamptz UTC,Observed event time; raw contains planted time errors,Never,
+events,one event (raw can contain duplicates),attempt_id,text,Queue-attempt identifier,Events unrelated to matchmaking,matchmaking_attempts.attempt_id
+events,one event (raw can contain duplicates),game_id,text,Game identifier,Non-game events or unsuccessful/pending attempts,game_participation.game_id + user_id
+matchmaking_attempts,one attempt,attempt_id,text,Queue-attempt identifier,Events unrelated to matchmaking,matchmaking_attempts.attempt_id
+matchmaking_attempts,one attempt,user_id,text,User identifier,Never,users.user_id
+matchmaking_attempts,one attempt,session_id,text,Session identifier,Never,sessions.session_id
+matchmaking_attempts,one attempt,queue_entered_at,timestamptz UTC,Matchmaking request accepted,Never,
+matchmaking_attempts,one attempt,queue_exited_at,timestamptz UTC,Join/failure/abandonment timestamp,Pending at observation cutoff,
+matchmaking_attempts,one attempt,outcome,category,joined/failed/abandoned/pending,Never,
+matchmaking_attempts,one attempt,failure_reason,category,client_timeout/network_error,Non-failed attempts,
+matchmaking_attempts,one attempt,game_id,text,Game identifier,Non-game events or unsuccessful/pending attempts,game_participation.game_id + user_id
+game_participation,one user-game participation,game_id,text,Game identifier,Non-game events or unsuccessful/pending attempts,game_participation.game_id + user_id
+game_participation,one user-game participation,user_id,text,User identifier,Never,users.user_id
+game_participation,one user-game participation,session_id,text,Session identifier,Never,sessions.session_id
+game_participation,one user-game participation,attempt_id,text,Queue-attempt identifier,Events unrelated to matchmaking,matchmaking_attempts.attempt_id
+game_participation,one user-game participation,joined_at,timestamptz UTC,Membership confirmation time,Never,
+game_participation,one user-game participation,started_at,timestamptz UTC,Game start time,Game never started before observation end,
+game_participation,one user-game participation,ended_at,timestamptz UTC,Game end or exit time,Not started or in progress at cutoff,
+game_participation,one user-game participation,completion_status,category,not_started/in_progress/completed/exited,Never,

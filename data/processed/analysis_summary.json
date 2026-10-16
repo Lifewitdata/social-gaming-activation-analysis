@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "users": 10000,
+  "eligible_users": 9897,
+  "activated_users": 4482,
+  "activation_rate": 0.4528645043952713,
+  "activation_ci": [
+    0.44307786530505266,
+    0.4626877199858028
+  ],
+  "d7_eligible_users": 9263,
+  "largest_loss_stage": "Game joined",
+  "largest_loss_users": 2186,
+  "target_users": 1187,
+  "target_activation_rate": 0.35299073294018535,
+  "standardised_low_tier_gap_pp": -10.152627927095399,
+  "retention_gap_pp": 2.155596016547645,
+  "experiment": {
+    "baseline": 0.35299073294018535,
+    "mde_absolute": 0.05,
+    "power": 0.8,
+    "alpha_two_sided": 0.05,
+    "users_per_arm": 1476,
+    "total_users": 2952,
+    "observed_target_users_per_day": 26.977272727272727,
+    "estimated_enrolment_days": 110,
+    "activation_followup_days": 1,
+    "d7_followup_up_to_days": 8
+  }
+}

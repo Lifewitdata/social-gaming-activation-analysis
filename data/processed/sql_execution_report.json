@@ -1,0 +1,65 @@
+{
+  "engine": "PGlite (PostgreSQL WASM)",
+  "postgres_version": "PostgreSQL 18.6 (PGlite 0.5.10) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.5 (1db513782be24469589d7cb8a1f1834e9a33f271), 32-bit",
+  "files_executed": [
+    "01_create_tables.sql",
+    "02_data_quality_checks.sql",
+    "03_build_user_activation.sql",
+    "04_overall_funnel.sql",
+    "05_segment_funnels.sql",
+    "06_matchmaking_diagnostics.sql",
+    "07_time_to_activation.sql",
+    "08_activation_and_d7_retention.sql"
+  ],
+  "dq": [
+    {
+      "check_name": "event_before_signup",
+      "violations": 0
+    },
+    {
+      "check_name": "event_outside_observation",
+      "violations": 0
+    },
+    {
+      "check_name": "event_session_owner",
+      "violations": 0
+    },
+    {
+      "check_name": "event_outside_session",
+      "violations": 0
+    },
+    {
+      "check_name": "attempt_session_owner",
+      "violations": 0
+    },
+    {
+      "check_name": "game_attempt_mismatch",
+      "violations": 0
+    },
+    {
+      "check_name": "event_attempt_owner",
+      "violations": 0
+    },
+    {
+      "check_name": "completed_game_missing_event",
+      "violations": 0
+    },
+    {
+      "check_name": "invalid_game_event_order",
+      "violations": 0
+    },
+    {
+      "check_name": "missing_signup_event",
+      "violations": 0
+    }
+  ],
+  "invariants": [
+    {
+      "users": 10000,
+      "unique_users": 10000,
+      "invalid_activation": 0,
+      "censored_retention": 0,
+      "invalid_time": 0
+    }
+  ]
+}

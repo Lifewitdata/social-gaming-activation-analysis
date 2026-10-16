@@ -1,0 +1,8 @@
+{
+  "independent_user_checks": 10000,
+  "funnel_mismatches": 0,
+  "boundary_fixtures": 5,
+  "boundary_fixture_failures": 0,
+  "raw_hash_checks_passed": true,
+  "sql_dq_checks_passed": true
+}

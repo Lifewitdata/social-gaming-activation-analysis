@@ -1,0 +1,35 @@
+{
+  "synthetic": true,
+  "seed": 2026,
+  "requested_users": 10000,
+  "observation_start": "2026-01-01T00:00:00+00:00",
+  "observation_end_exclusive": "2026-04-01T00:00:00+00:00",
+  "timezone": "UTC",
+  "injected_faults": {
+    "duplicate_event_rows": 100,
+    "before_signup": 30,
+    "unknown_user": 20
+  },
+  "files": {
+    "users": {
+      "rows": 10000,
+      "sha256": "d3834adb4c089b416dbb282964b21b019eb6818819e2e27e3d29b98528f9ebb2"
+    },
+    "sessions": {
+      "rows": 57332,
+      "sha256": "5fbefe6daaca5730949b425c37dfc43f2ec4601a2b6cee26c42bd015c0411ceb"
+    },
+    "events": {
+      "rows": 281652,
+      "sha256": "3761e672c3b044b463f24df6e458f1d0e6ca6414c1640e51f7c650d8ccf3aa49"
+    },
+    "matchmaking_attempts": {
+      "rows": 45847,
+      "sha256": "2b4d10ba57b73787990df8eea5379e179a89a87ab4319307be3e543b397be0ea"
+    },
+    "game_participation": {
+      "rows": 34384,
+      "sha256": "e106f43dc8b990eccc4aedafa0d4700010defd42dd4204e065ddf2547cae5968"
+    }
+  }
+}

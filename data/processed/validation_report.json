@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "users_unique_key",
+      "passed": true
+    },
+    {
+      "check": "users_nonnull_key",
+      "passed": true
+    },
+    {
+      "check": "sessions_unique_key",
+      "passed": true
+    },
+    {
+      "check": "sessions_nonnull_key",
+      "passed": true
+    },
+    {
+      "check": "sessions_valid_user",
+      "passed": true
+    },
+    {
+      "check": "matchmaking_attempts_unique_key",
+      "passed": true
+    },
+    {
+      "check": "matchmaking_attempts_nonnull_key",
+      "passed": true
+    },
+    {
+      "check": "matchmaking_attempts_valid_user",
+      "passed": true
+    },
+    {
+      "check": "game_participation_unique_key",
+      "passed": true
+    },
+    {
+      "check": "game_participation_nonnull_key",
+      "passed": true
+    },
+    {
+      "check": "game_participation_valid_user",
+      "passed": true
+    },
+    {
+      "check": "registration_in_window",
+      "passed": true
+    },
+    {
+      "check": "session_order",
+      "passed": true
+    },
+    {
+      "check": "session_after_signup",
+      "passed": true
+    },
+    {
+      "check": "matchmaking_attempts_session_owner",
+      "passed": true
+    },
+    {
+      "check": "game_participation_session_owner",
+      "passed": true
+    },
+    {
+      "check": "queue_order",
+      "passed": true
+    },
+    {
+      "check": "pending_queue_null_exit",
+      "passed": true
+    },
+    {
+      "check": "attempt_outcomes",
+      "passed": true
+    },
+    {
+      "check": "failed_reason",
+      "passed": true
+    },
+    {
+      "check": "game_attempt_owner",
+      "passed": true
+    },
+    {
+      "check": "game_attempt_id",
+      "passed": true
+    },
+    {
+      "check": "game_start_order",
+      "passed": true
+    },
+    {
+      "check": "game_end_order",
+      "passed": true
+    },
+    {
+      "check": "completed_has_end",
+      "passed": true
+    },
+    {
+      "check": "clean_events_unique",
+      "passed": true
+    },
+    {
+      "check": "clean_events_valid_user",
+      "passed": true
+    },
+    {
+      "check": "signup_event_coverage",
+      "passed": true
+    },
+    {
+      "check": "raw_reconciliation",
+      "passed": true
+    },
+    {
+      "check": "completed_event_reconciliation",
+      "passed": true
+    }
+  ],
+  "raw_event_rows": 281652,
+  "clean_event_rows": 281502,
+  "quarantined_rows": 150,
+  "reason_counts": {
+    "duplicate_event_id": 100,
+    "outside_session": 30,
+    "before_signup": 30,
+    "session_owner_mismatch": 20,
+    "unknown_user": 20,
+    "attempt_owner_mismatch": 10,
+    "game_owner_mismatch": 7
+  }
+}
